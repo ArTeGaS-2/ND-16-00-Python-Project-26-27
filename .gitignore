@@ -1,0 +1,31 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and test tools
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+.cache/
+
+# Local secrets and configuration
+.env
+.env.*
+*.env
+*.key
+*.pem
+secrets.*
+test_api.local.py
+
+# Runtime history and local editor state
+.python_history
+*.history
+.ipynb_checkpoints/
+.vscode/
+.idea/
