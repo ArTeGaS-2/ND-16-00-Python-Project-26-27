@@ -1,7 +1,10 @@
 from openai import OpenAI
+from pathlib import Path # Шляхи до файлів
+import json # Збереження даних
+
 API_KEY = "YOUR_OPENAI_API_KEY"
 client = OpenAI(api_key=API_KEY, max_retries=0)
-MODEL = "gpt-5.6-luna"
+MODEL = "gpt-6-luna"
 INSTRUCTION = "Ти Python-розробник для текстової RPG в форматі. " \
             "Ти маєш створювати і редагувати скрипти і промпти викликів моделей."
 
@@ -17,15 +20,24 @@ def ask(context):
         include=["reasoning.encrypted_content"]
     )
 
+ROOT = (Path(__file__).resolve().parent / "game").resolve()
+ROOT.mkdir(exist_ok=True)
+def list_files():
+    return "\n".join(str(f.relative_to(ROOT)) for f in ROOT.rglob("*.py")) or "(Порожньо)"
+HANDLERS = {"list_files": list_files}
+def execute_tool(item):
+    print("Інструмент: ", item.name)
+    return HANDLERS[item.name](**json.loads(item.arguments))
+
 def describe_tool(name, description, properties):
     return {
         "type": "function",
         "name": name,
         "description": description,
-        "parametrs": {
+        "parameters": {
             "type": "object",
-            "propetries": properties,
-            "request": list(properties),
+            "properties": properties,
+            "required": list(properties),
             "additionalProperties": False
         }, "strict": True
     }
