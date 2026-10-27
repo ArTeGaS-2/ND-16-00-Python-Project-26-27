@@ -1,9 +1,5 @@
-"""Аксесуари та біжутерія."""
+"""Сумісний імпорт біжутерії з jewelry.py."""
 
-from .base import EquipmentItem
+from .jewelry import Jewelry
 
-
-class Jewelry(EquipmentItem):
-    """Біжутерія персонажа."""
-
-    pass
+__all__ = ["Jewelry"]

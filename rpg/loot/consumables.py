@@ -1,21 +1,7 @@
-"""Їжа, напої та зілля."""
+"""Сумісні імпорти витратних предметів з окремих модулів."""
 
-from .base import LootItem
+from .drink import Drink
+from .food import Food
+from .potion import Potion
 
-
-class Food(LootItem):
-    """Їжа."""
-
-    pass
-
-
-class Drink(LootItem):
-    """Напій."""
-
-    pass
-
-
-class Potion(LootItem):
-    """Зілля."""
-
-    pass
+__all__ = ["Food", "Drink", "Potion"]

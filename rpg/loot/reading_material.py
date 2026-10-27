@@ -1,15 +1,6 @@
-"""Сувої та книжки."""
+"""Сумісні імпорти сувоїв і книжок з окремих модулів."""
 
-from .base import LootItem
+from .book import Book
+from .scroll import Scroll
 
-
-class Scroll(LootItem):
-    """Сувій."""
-
-    pass
-
-
-class Book(LootItem):
-    """Книжка."""
-
-    pass
+__all__ = ["Scroll", "Book"]

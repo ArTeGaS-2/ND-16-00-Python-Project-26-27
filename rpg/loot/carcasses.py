@@ -1,15 +1,6 @@
-"""Туші та частини туш."""
+"""Сумісні імпорти туш і частин туш з окремих модулів."""
 
-from .base import LootItem
+from .carcass import Carcass
+from .carcass_part import CarcassPart
 
-
-class Carcass(LootItem):
-    """Туша істоти."""
-
-    pass
-
-
-class CarcassPart(LootItem):
-    """Частина туші."""
-
-    pass
+__all__ = ["Carcass", "CarcassPart"]

@@ -1,6 +1,6 @@
 """Одяг персонажа."""
 
-from .base import EquipmentItem
+from .equipment_item import EquipmentItem
 
 
 class Clothing(EquipmentItem):

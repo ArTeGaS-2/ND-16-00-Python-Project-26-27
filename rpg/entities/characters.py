@@ -1,21 +1,7 @@
-"""Ігрові персонажі."""
+"""Сумісні імпорти персонажів з окремих модулів."""
 
-from .base import Entity
+from .enemy import Enemy
+from .npc import NPC
+from .player import Player
 
-
-class Player(Entity):
-    """Персонаж гравця."""
-
-    pass
-
-
-class Enemy(Entity):
-    """Ворожа сутність."""
-
-    pass
-
-
-class NPC(Entity):
-    """Неігровий персонаж."""
-
-    pass
+__all__ = ["Player", "Enemy", "NPC"]

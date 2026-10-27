@@ -1,7 +1,5 @@
-"""Набір екіпірування персонажа."""
+"""Сумісний імпорт набору екіпірування з equipment_loadout.py."""
 
+from .equipment_loadout import EquipmentLoadout
 
-class EquipmentLoadout:
-    """Контейнер для екіпірованих предметів; логіку можна додати пізніше."""
-
-    pass
+__all__ = ["EquipmentLoadout"]

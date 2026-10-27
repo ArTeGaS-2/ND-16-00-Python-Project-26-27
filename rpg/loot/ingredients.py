@@ -1,9 +1,5 @@
-"""Інгредієнти для ремесел і приготування."""
+"""Сумісний імпорт інгредієнта з ingredient.py."""
 
-from .base import LootItem
+from .ingredient import Ingredient
 
-
-class Ingredient(LootItem):
-    """Інгредієнт."""
-
-    pass
+__all__ = ["Ingredient"]

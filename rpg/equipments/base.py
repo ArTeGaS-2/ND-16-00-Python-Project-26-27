@@ -1,7 +1,5 @@
-"""Базовий клас предмета екіпірування."""
+"""Сумісний імпорт базового екіпірування з equipment_item.py."""
 
+from .equipment_item import EquipmentItem
 
-class EquipmentItem:
-    """Спільна основа для зброї, одягу та інших предметів."""
-
-    pass
+__all__ = ["EquipmentItem"]

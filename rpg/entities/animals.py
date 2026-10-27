@@ -1,9 +1,5 @@
-"""Тварини як ігрові сутності."""
+"""Сумісний імпорт тварини з модуля animal.py."""
 
-from .base import Entity
+from .animal import Animal
 
-
-class Animal(Entity):
-    """Базове представлення тварини у світі."""
-
-    pass
+__all__ = ["Animal"]

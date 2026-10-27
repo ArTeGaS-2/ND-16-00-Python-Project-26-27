@@ -1,15 +1,6 @@
-"""Зброя ближнього та дальнього бою."""
+"""Сумісні імпорти зброї з окремих модулів."""
 
-from .base import EquipmentItem
+from .melee_weapon import MeleeWeapon
+from .ranged_weapon import RangedWeapon
 
-
-class MeleeWeapon(EquipmentItem):
-    """Зброя для ближнього бою."""
-
-    pass
-
-
-class RangedWeapon(EquipmentItem):
-    """Зброя для дальнього бою."""
-
-    pass
+__all__ = ["MeleeWeapon", "RangedWeapon"]
